@@ -1,0 +1,262 @@
+1640597039210	geckodriver	INFO	Listening on 127.0.0.1:59025
+1640597039215	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofiler8ZT7M"
+Error: no DISPLAY environment variable specified
+1640597113518	geckodriver	INFO	Listening on 127.0.0.1:50355
+1640597113524	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofiletq9Vmy"
+Error: no DISPLAY environment variable specified
+1640597270354	geckodriver	INFO	Listening on 127.0.0.1:48637
+1640597270360	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofileYvAIQO"
+Error: no DISPLAY environment variable specified
+1640597310858	geckodriver	INFO	Listening on 127.0.0.1:49581
+1640597310864	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofileoXbWeq"
+Error: no DISPLAY environment variable specified
+1640597399567	geckodriver	INFO	Listening on 127.0.0.1:34077
+1640597399577	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofileeky782"
+1640597400159	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileeky782/search.json.mozlz4", (void 0)))
+1640597401257	Marionette	INFO	Listening on port 39503
+1640597401298	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1640597411451	Marionette	INFO	Stopped listening on port 39503
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1640597444387	geckodriver	INFO	Listening on 127.0.0.1:41489
+1640597444392	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofilein5Ist"
+1640597445011	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilein5Ist/search.json.mozlz4", (void 0)))
+1640597446081	Marionette	INFO	Listening on port 40931
+1640597446117	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1640597463101	Marionette	INFO	Stopped listening on port 40931
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1640597466295	geckodriver	INFO	Listening on 127.0.0.1:42979
+1640597466301	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofileenWILj"
+1640597466888	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileenWILj/search.json.mozlz4", (void 0)))
+1640597467978	Marionette	INFO	Listening on port 41441
+1640597468027	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[Child 20904, MediaDecoderStateMachine #1] WARNING: Decoder=7efd88408500 state=DECODING_METADATA Decode metadata failed, shutting down decoder: file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:367
+[Child 20904, MediaDecoderStateMachine #1] WARNING: Decoder=7efd88408500 Decode error: NS_ERROR_DOM_MEDIA_METADATA_ERR (0x806e0006): file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:3568
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.2e19bfdcbac4b3db012d.js, line 1: unreachable code after return statement
+1640597490290	Marionette	INFO	Stopped listening on port 41441
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1640597492115	geckodriver	INFO	Listening on 127.0.0.1:37249
+1640597492121	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofile9Chqmu"
+1640597492724	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile9Chqmu/search.json.mozlz4", (void 0)))
+1640597493812	Marionette	INFO	Listening on port 37045
+1640597493844	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[Child 21206, MediaDecoderStateMachine #1] WARNING: Decoder=7f5700302a00 state=DECODING_METADATA Decode metadata failed, shutting down decoder: file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:367
+[Child 21206, MediaDecoderStateMachine #1] WARNING: Decoder=7f5700302a00 Decode error: NS_ERROR_DOM_MEDIA_METADATA_ERR (0x806e0006): file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:3568
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.2e19bfdcbac4b3db012d.js, line 1: unreachable code after return statement
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1640597572920	Marionette	INFO	Stopped listening on port 37045
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1640597573737	geckodriver	INFO	Listening on 127.0.0.1:45729
+1640597573742	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofilerMYGLw"
+1640597574325	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilerMYGLw/search.json.mozlz4", (void 0)))
+1640597575441	Marionette	INFO	Listening on port 44467
+1640597575465	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[Child 21585, MediaDecoderStateMachine #1] WARNING: Decoder=7fc37ef0fd00 state=DECODING_METADATA Decode metadata failed, shutting down decoder: file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:367
+[Child 21585, MediaDecoderStateMachine #1] WARNING: Decoder=7fc37ef0fd00 Decode error: NS_ERROR_DOM_MEDIA_METADATA_ERR (0x806e0006): file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:3568
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.2e19bfdcbac4b3db012d.js, line 1: unreachable code after return statement
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1640597673805	Marionette	INFO	Stopped listening on port 44467
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1640597675749	geckodriver	INFO	Listening on 127.0.0.1:49405
+1640597675755	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofileY2yEDk"
+1640597676348	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileY2yEDk/search.json.mozlz4", (void 0)))
+1640597677463	Marionette	INFO	Listening on port 34191
+1640597677589	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.2e19bfdcbac4b3db012d.js, line 1: unreachable code after return statement
+[Child 21962, MediaDecoderStateMachine #1] WARNING: Decoder=7f31dfcf4400 state=DECODING_METADATA Decode metadata failed, shutting down decoder: file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:367
+[Child 21962, MediaDecoderStateMachine #1] WARNING: Decoder=7f31dfcf4400 Decode error: NS_ERROR_DOM_MEDIA_METADATA_ERR (0x806e0006): file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:3568
+[Child 21962, MediaDecoderStateMachine #1] WARNING: Decoder=7f31dfcf7a00 state=DECODING_METADATA Decode metadata failed, shutting down decoder: file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:367
+[Child 21962, MediaDecoderStateMachine #1] WARNING: Decoder=7f31dfcf7a00 Decode error: NS_ERROR_DOM_MEDIA_METADATA_ERR (0x806e0006): file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:3568
+[Child 21962, MediaDecoderStateMachine #1] WARNING: Decoder=7f31de280a00 state=DECODING_METADATA Decode metadata failed, shutting down decoder: file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:367
+[Child 21962, MediaDecoderStateMachine #1] WARNING: Decoder=7f31de280a00 Decode error: NS_ERROR_DOM_MEDIA_METADATA_ERR (0x806e0006): file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:3568
+1640597694585	Marionette	INFO	Stopped listening on port 34191
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1640597737040	geckodriver	INFO	Listening on 127.0.0.1:39257
+1640597737046	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofilemOPhIh"
+1640597737658	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilemOPhIh/search.json.mozlz4", (void 0)))
+1640597738912	Marionette	INFO	Listening on port 32967
+1640597738979	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[Child 22305, MediaDecoderStateMachine #1] WARNING: Decoder=7fdba690ad00 state=DECODING_METADATA Decode metadata failed, shutting down decoder: file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:367
+[Child 22305, MediaDecoderStateMachine #1] WARNING: Decoder=7fdba690ad00 Decode error: NS_ERROR_DOM_MEDIA_METADATA_ERR (0x806e0006): file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:3568
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.2e19bfdcbac4b3db012d.js, line 1: unreachable code after return statement
+1640597779967	geckodriver	INFO	Listening on 127.0.0.1:40489
+1640597779973	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofilenHZgTQ"
+1640597780600	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilenHZgTQ/search.json.mozlz4", (void 0)))
+1640597781785	Marionette	INFO	Listening on port 38633
+1640597781904	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[Child 22636, MediaDecoderStateMachine #1] WARNING: Decoder=7ffad6607f00 state=DECODING_METADATA Decode metadata failed, shutting down decoder: file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:367
+[Child 22636, MediaDecoderStateMachine #1] WARNING: Decoder=7ffad6607f00 Decode error: NS_ERROR_DOM_MEDIA_METADATA_ERR (0x806e0006): file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:3568
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.2e19bfdcbac4b3db012d.js, line 1: unreachable code after return statement
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.2e19bfdcbac4b3db012d.js, line 1: unreachable code after return statement
+1640598110292	Marionette	INFO	Stopped listening on port 32967
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1640598112078	geckodriver	INFO	Listening on 127.0.0.1:56367
+1640598112083	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofileCEfGEH"
+1640598112670	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileCEfGEH/search.json.mozlz4", (void 0)))
+1640598113780	Marionette	INFO	Listening on port 39807
+1640598113804	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[Child 23923, MediaDecoderStateMachine #1] WARNING: Decoder=7f7beb2c1500 state=DECODING_METADATA Decode metadata failed, shutting down decoder: file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:367
+[Child 23923, MediaDecoderStateMachine #1] WARNING: Decoder=7f7beb2c1500 Decode error: NS_ERROR_DOM_MEDIA_METADATA_ERR (0x806e0006): file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:3568
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.2e19bfdcbac4b3db012d.js, line 1: unreachable code after return statement
+1640598141053	geckodriver	INFO	Listening on 127.0.0.1:40411
+1640598141058	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofileE3ZSs5"
+1640598141651	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileE3ZSs5/search.json.mozlz4", (void 0)))
+1640598142739	Marionette	INFO	Listening on port 41155
+1640598142780	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[Child 24237, MediaDecoderStateMachine #1] WARNING: Decoder=7f07cd607a00 state=DECODING_METADATA Decode metadata failed, shutting down decoder: file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:367
+[Child 24237, MediaDecoderStateMachine #1] WARNING: Decoder=7f07cd607a00 Decode error: NS_ERROR_DOM_MEDIA_METADATA_ERR (0x806e0006): file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:3568
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.2e19bfdcbac4b3db012d.js, line 1: unreachable code after return statement
+1640598208861	geckodriver	INFO	Listening on 127.0.0.1:52125
+1640598208867	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofile2fzrqK"
+1640598209473	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile2fzrqK/search.json.mozlz4", (void 0)))
+1640598210600	Marionette	INFO	Listening on port 42761
+1640598210696	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[Child 24624, MediaDecoderStateMachine #1] WARNING: Decoder=7fa951809100 state=DECODING_METADATA Decode metadata failed, shutting down decoder: file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:367
+[Child 24624, MediaDecoderStateMachine #1] WARNING: Decoder=7fa951809100 Decode error: NS_ERROR_DOM_MEDIA_METADATA_ERR (0x806e0006): file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:3568
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.2e19bfdcbac4b3db012d.js, line 1: unreachable code after return statement
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1640598583996	Marionette	INFO	Stopped listening on port 41155
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1640598586383	Marionette	INFO	Stopped listening on port 39807
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1640598628472	geckodriver	INFO	Listening on 127.0.0.1:56109
+1640598628478	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofilevlWHBi"
+1640598629078	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilevlWHBi/search.json.mozlz4", (void 0)))
+1640598630199	Marionette	INFO	Listening on port 40325
+1640598630308	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[Child 27443, MediaDecoderStateMachine #1] WARNING: Decoder=7f6aa930da00 state=DECODING_METADATA Decode metadata failed, shutting down decoder: file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:367
+[Child 27443, MediaDecoderStateMachine #1] WARNING: Decoder=7f6aa930da00 Decode error: NS_ERROR_DOM_MEDIA_METADATA_ERR (0x806e0006): file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:3568
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.2e19bfdcbac4b3db012d.js, line 1: unreachable code after return statement
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1640600222829	geckodriver	INFO	Listening on 127.0.0.1:39661
+1640600222835	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofileZWqULE"
+1640600223457	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileZWqULE/search.json.mozlz4", (void 0)))
+1640600224572	Marionette	INFO	Listening on port 44381
+1640600224663	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[Child 29307, MediaDecoderStateMachine #1] WARNING: Decoder=7f5b5740b300 state=DECODING_METADATA Decode metadata failed, shutting down decoder: file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:367
+[Child 29307, MediaDecoderStateMachine #1] WARNING: Decoder=7f5b5740b300 Decode error: NS_ERROR_DOM_MEDIA_METADATA_ERR (0x806e0006): file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:3568
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.2e19bfdcbac4b3db012d.js, line 1: unreachable code after return statement
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 980: TypeError: state.hideToggleDeferredTask is null
+1640600302062	geckodriver	INFO	Listening on 127.0.0.1:38707
+1640600302068	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofileN8EW3t"
+1640600302675	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileN8EW3t/search.json.mozlz4", (void 0)))
+1640600303876	Marionette	INFO	Listening on port 35411
+1640600304013	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[Child 29593, MediaDecoderStateMachine #1] WARNING: Decoder=7f87f4508e00 state=DECODING_METADATA Decode metadata failed, shutting down decoder: file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:367
+[Child 29593, MediaDecoderStateMachine #1] WARNING: Decoder=7f87f4508e00 Decode error: NS_ERROR_DOM_MEDIA_METADATA_ERR (0x806e0006): file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:3568
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.2e19bfdcbac4b3db012d.js, line 1: unreachable code after return statement
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1640600379567	geckodriver	INFO	Listening on 127.0.0.1:53431
+1640600379572	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofilegJI4YZ"
+1640600380151	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilegJI4YZ/search.json.mozlz4", (void 0)))
+1640600381326	Marionette	INFO	Listening on port 38679
+1640600381405	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1640600381961	Marionette	INFO	Stopped listening on port 38679
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 691: TypeError: this.tablesData[table] is undefined
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1640600381993	geckodriver::marionette	ERROR	Failed to close browser connection: Socket not connected (os error 107)
+[2021-12-27T10:19:42Z ERROR glean] Can't persist ping lifetime data: Error { kind: Rkv(IoError(Os { code: 2, kind: NotFound, message: "No such file or directory" })) }
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1640600382803	Marionette	INFO	Stopped listening on port 40325
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1640600384802	geckodriver	INFO	Listening on 127.0.0.1:38353
+1640600384808	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofilevoQEFr"
+1640600385416	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilevoQEFr/search.json.mozlz4", (void 0)))
+1640600386530	Marionette	INFO	Listening on port 33989
+1640600386649	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[Child 30133, MediaDecoderStateMachine #1] WARNING: Decoder=7fab8960ff00 state=DECODING_METADATA Decode metadata failed, shutting down decoder: file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:367
+[Child 30133, MediaDecoderStateMachine #1] WARNING: Decoder=7fab8960ff00 Decode error: NS_ERROR_DOM_MEDIA_METADATA_ERR (0x806e0006): file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:3568
+[Child 30133, MediaDecoderStateMachine #1] WARNING: Decoder=7fab89614500 state=DECODING_METADATA Decode metadata failed, shutting down decoder: file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:367
+[Child 30133, MediaDecoderStateMachine #1] WARNING: Decoder=7fab89614500 Decode error: NS_ERROR_DOM_MEDIA_METADATA_ERR (0x806e0006): file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:3568
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.2e19bfdcbac4b3db012d.js, line 1: unreachable code after return statement
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1640600730212	geckodriver	INFO	Listening on 127.0.0.1:48385
+1640600730218	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofileB3glAe"
+1640600730798	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileB3glAe/search.json.mozlz4", (void 0)))
+1640600731904	Marionette	INFO	Listening on port 41079
+1640600731941	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[Child 30430, MediaDecoderStateMachine #1] WARNING: Decoder=7f39e2707600 state=DECODING_METADATA Decode metadata failed, shutting down decoder: file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:367
+[Child 30430, MediaDecoderStateMachine #1] WARNING: Decoder=7f39e2707600 Decode error: NS_ERROR_DOM_MEDIA_METADATA_ERR (0x806e0006): file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:3568
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.2e19bfdcbac4b3db012d.js, line 1: unreachable code after return statement
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1640600784771	geckodriver	INFO	Listening on 127.0.0.1:48697
+1640600784783	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofileliwrcd"
+1640600785377	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileliwrcd/search.json.mozlz4", (void 0)))
+1640600786470	Marionette	INFO	Listening on port 43625
+1640600786510	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[Child 30713, MediaDecoderStateMachine #1] WARNING: Decoder=7ff037e0df00 state=DECODING_METADATA Decode metadata failed, shutting down decoder: file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:367
+[Child 30713, MediaDecoderStateMachine #1] WARNING: Decoder=7ff037e0df00 Decode error: NS_ERROR_DOM_MEDIA_METADATA_ERR (0x806e0006): file /build/firefox-ioEWEk/firefox-95.0.1+build2/dom/media/MediaDecoderStateMachine.cpp:3568
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.2e19bfdcbac4b3db012d.js, line 1: unreachable code after return statement
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
