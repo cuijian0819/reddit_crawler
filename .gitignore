@@ -1,0 +1,5 @@
+data/
+backup/
+.ipynb_checkpoints
+.vscode
+geckodriver.log
