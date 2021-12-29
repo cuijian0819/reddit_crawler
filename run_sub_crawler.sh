@@ -1,1 +1,0 @@
-nohup python -u submission_crawler.py --year 2020 > submissions.log &
