@@ -3,6 +3,12 @@ import pickle
 import os
 from tqdm import tqdm
 from collections import defaultdict
+from multiprocessing import Pool
+from itertools import repeat
+import numpy as np
+import argparse
+
+
 from pdb import set_trace
 
 reddit = praw.Reddit(
@@ -13,6 +19,15 @@ reddit = praw.Reddit(
     username="dev_jian",
     ratelimit_seconds=60,
 )
+
+
+ap = argparse.ArgumentParser(description='reddit crawler')
+ap.add_argument('--year', type=int, default=2021, 
+                help='year to crawl')
+
+args = ap.parse_args()
+
+year = args.year
 
 # posts_dict: 
 # key:  msg_id
@@ -25,8 +40,8 @@ reddit = praw.Reddit(
 #             quote: '', msg:''}, ...]
 
 
-if os.path.exists('data/reddit_btc_parsed'):
-    with open("data/reddit_btc_parsed", "rb") as f:
+if os.path.exists('data/reddit_btc_parsed_{}'.format(year)):
+    with open('data/reddit_btc_parsed_{}'.format(year), "rb") as f:
         posts_dict, threads_dict = pickle.load(f)
 
 else: 
@@ -35,75 +50,89 @@ else:
 
     
 submission_list = list()
-file_list = os.listdir('data/submissions')
+file_list = os.listdir('data/submissions/{}'.format(year))
 for sub in tqdm(file_list):
-    with open('data/submissions/' + sub, 'rb') as f:
+    with open('data/submissions/{}/'.format(year) + sub, 'rb') as f:
         tmp_list = pickle.load(f)
     submission_list += tmp_list
     
 print("# of submissions: {}".format(len(submission_list)))
 
 
-for sub in tqdm(submission_list):
+for i, sub in enumerate(tqdm(submission_list)):
     sub_id = sub['id']
-    # already saved 
+    # skip already saved 
     if sub_id in threads_dict: 
+        # print("{} have already saved".format(sub_id))
         continue
-    
+
     submission = reddit.submission(sub_id)
 
     # filtering 
     if submission.selftext == '[deleted]':
-        # print("deleted")
-        continue
-    if submission.selftext == '[removed]':
-        # print("deleted")
-        continue
+         threads_dict[sub_id] = None
+    elif submission.selftext == '[removed]':
+         threads_dict[sub_id] = None
     elif submission.selftext == '':
-        # print("deleted 2")
-        continue
-
-    threads_dict[sub['id']] += [{'msg_id': sub['id'], \
+         threads_dict[sub_id] = None
+    else:
+        threads_dict[sub_id] += [{'msg_id': sub_id, \
+                                     'poster': sub['author'], \
+                                     'thread_id': sub['id'], \
+                                     'msg': submission.selftext, \
+                                     'timestamp': submission.created_utc,
+                                    }] 
+        posts_dict[sub['id']] = {'msg_id': sub_id, \
                                  'poster': sub['author'], \
                                  'thread_id': sub['id'], \
-                                 'msg': submission.selftext}] 
-    posts_dict[sub['id']] = {'msg_id': sub['id'], \
-                             'poster': sub['author'], \
-                             'thread_id': sub['id'],
-                             'msg': submission.selftext}
+                                 'msg': submission.selftext, \
+                                 'timestamp': submission.created_utc}
 
-    # comment
-    submission.comments.replace_more(limit=None)
-    for comment in submission.comments.list():
-        prefix, pid = comment.parent_id.split('_')
-        if prefix == 't3':
-            quote = None
-        else:
-            quote = pid
+        # comment
+        submission.comments.replace_more(limit=None)
+        for comment in submission.comments.list():
+            prefix, pid = comment.parent_id.split('_')
+            if prefix == 't3':
+                quote = None
+            else:
+                quote = pid
 
-        if comment.author != None: 
-            poster = comment.author.name
-        else:
-            poster = None
+            if comment.author != None: 
+                poster = comment.author.name
+            else:
+                poster = None
 
-        threads_dict[sub['id']] += [{'msg_id': comment.id, \
-                                     'poster': poster, \
-                                     'thread_id': sub['id'], \
-                                     'msg': comment.body, \
-                                     'quote': quote} \
-                                   ] 
-        posts_dict[comment.id] = {'msg_id': comment.id, \
-                                  'poster': poster, \
-                                  'thread_id': sub['id'], \
-                                  'msg': comment.body, \
-                                  'quote': quote} 
+            threads_dict[sub['id']] += [{'msg_id': comment.id, \
+                                         'poster': poster, \
+                                         'thread_id': sub['id'], \
+                                         'msg': comment.body, \
+                                         'quote': quote, \
+                                         'timestamp': comment.created_utc} \
+                                       ] 
+            posts_dict[comment.id] = {'msg_id': comment.id, \
+                                      'poster': poster, \
+                                      'thread_id': sub['id'], \
+                                      'msg': comment.body, \
+                                      'quote': quote, \
+                                      'timestamp': comment.created_utc}
 
-    with open("data/reddit_btc_parsed", "wb") as f:
-        pickle.dump([posts_dict, threads_dict], f)
+    # save
+    if i%100 == 0: 
+        print("update dictionary...")
+        with open('data/reddit_btc_parsed_{}'.format(year), "wb") as f:
+            pickle.dump([posts_dict, threads_dict], f)
         
-# print(posts_dict)
-# print(threads_dict)
-# set_trace()
+        
+# num_proc = 8
+
+# pool = Pool(processes=num_proc)
+
+# submission_sublists = np.array_split(submission_list, num_proc)
+
+# pool.map(make_dict, submission_sublists)
+# pool.close() 
+# pool.join()
+
 
     
     
