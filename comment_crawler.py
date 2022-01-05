@@ -11,16 +11,34 @@ import prawcore
 
 from pdb import set_trace
 
-# reddit = praw.Reddit(
-#     client_id="XAWWcdEAoBj5NyhDFhoZGg",
-#     client_secret="376aCdcCboyRVXCoff5wusr-Y19ahQ",
-#     password="jianjian.",
-#     user_agent="USERAGENT",
-#     username="dev_jian",
-#     ratelimit_seconds=60,
-# )
+reddit1 = praw.Reddit(
+    client_id="Z_XahTL1F5Qh78M1duhrag",
+    client_secret="-1oma1BFTHRHaTEc8gzVyviijolS8w",
+    password="nssadmin!",
+    user_agent="USERAGENT",
+    username="nss_mk",
+    ratelimit_seconds=60,
+)
 
-reddit = praw.Reddit(
+reddit2 = praw.Reddit(
+    client_id="N_JPpabcnEVN5sk9gsCrpQ",
+    client_secret="uZjkpKcY5OXdKt0Mw20aSaXhy22uSQ",
+    password="nssadmin!",
+    user_agent="USERAGENT",
+    username="NSS11223344",
+    ratelimit_seconds=60,
+)
+
+reddit3 = praw.Reddit(
+    client_id="XAWWcdEAoBj5NyhDFhoZGg",
+    client_secret="376aCdcCboyRVXCoff5wusr-Y19ahQ",
+    password="jianjian.",
+    user_agent="USERAGENT",
+    username="dev_jian",
+    ratelimit_seconds=60,
+)
+
+reddit4 = praw.Reddit(
     client_id="R28puZYRno9JelIiMNtwGA",
     client_secret="6PLNOoZapjk2AW-BMBXoeQuSmLywUg",
     password="nssrhksdn!@#",
@@ -28,6 +46,8 @@ reddit = praw.Reddit(
     username="nss_kw",
     ratelimit_seconds=60,
 )
+
+reddit_list = [reddit1, reddit2, reddit3, reddit4]
 
 ap = argparse.ArgumentParser(description='reddit crawler')
 ap.add_argument('--year', type=int, default=2021, 
@@ -73,8 +93,9 @@ for i, sub in enumerate(tqdm(submission_list)):
     if sub_id in threads_dict: 
         # print("{} have already saved".format(sub_id))
         continue
-        
-    submission = reddit.submission(sub_id)
+    
+    tmp_reddit = reddit_list[(i%4)]
+    submission = tmp_reddit.submission(sub_id)
     try:
         submission._fetch()
     except prawcore.exceptions.NotFound:

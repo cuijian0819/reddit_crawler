@@ -12,16 +12,16 @@ import pandas as pd
 
 from pdb import set_trace
 
-# reddit = praw.Reddit(
-#     client_id="Z_XahTL1F5Qh78M1duhrag",
-#     client_secret="-1oma1BFTHRHaTEc8gzVyviijolS8w",
-#     password="nssadmin!",
-#     user_agent="USERAGENT",
-#     username="nss_mk",
-#     ratelimit_seconds=60,
-# )
+reddit1 = praw.Reddit(
+    client_id="Z_XahTL1F5Qh78M1duhrag",
+    client_secret="-1oma1BFTHRHaTEc8gzVyviijolS8w",
+    password="nssadmin!",
+    user_agent="USERAGENT",
+    username="nss_mk",
+    ratelimit_seconds=60,
+)
 
-reddit = praw.Reddit(
+reddit2 = praw.Reddit(
     client_id="N_JPpabcnEVN5sk9gsCrpQ",
     client_secret="uZjkpKcY5OXdKt0Mw20aSaXhy22uSQ",
     password="nssadmin!",
@@ -29,6 +29,26 @@ reddit = praw.Reddit(
     username="NSS11223344",
     ratelimit_seconds=60,
 )
+
+reddit3 = praw.Reddit(
+    client_id="XAWWcdEAoBj5NyhDFhoZGg",
+    client_secret="376aCdcCboyRVXCoff5wusr-Y19ahQ",
+    password="jianjian.",
+    user_agent="USERAGENT",
+    username="dev_jian",
+    ratelimit_seconds=60,
+)
+
+reddit4 = praw.Reddit(
+    client_id="R28puZYRno9JelIiMNtwGA",
+    client_secret="6PLNOoZapjk2AW-BMBXoeQuSmLywUg",
+    password="nssrhksdn!@#",
+    user_agent="USERAGENT",
+    username="nss_kw",
+    ratelimit_seconds=60,
+)
+
+reddit_list = [reddit1, reddit2, reddit3, reddit4]
 
 ap = argparse.ArgumentParser(description='reddit crawler')
 ap.add_argument('--year', type=int, default=2019, 
@@ -59,8 +79,9 @@ print('# of redditor: {}'.format(len(redditors_list)))
 for i, redditor_name in enumerate(tqdm(redditors_list)):
     if redditor_name in redditors_dict:
         continue
-        
-    redditor = reddit.redditor(redditor_name)
+
+    tmp_reddit = reddit_list[(i%4)]
+    redditor = tmp_reddit.redditor(redditor_name)
     
     try:
         redditor._fetch()
@@ -81,7 +102,7 @@ for i, redditor_name in enumerate(tqdm(redditors_list)):
                                          'trophies': redditor.trophies(),
                                         }
 
-    if i%10 == 0: 
+    if i%100 == 0: 
         print("update dictionary...")
         with open('data/redditors_dict_{}'.format(year), "wb") as f:
             pickle.dump(redditors_dict, f)
