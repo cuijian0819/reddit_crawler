@@ -7,19 +7,27 @@ from multiprocessing import Pool
 from itertools import repeat
 import numpy as np
 import argparse
-
+import prawcore
 
 from pdb import set_trace
 
+# reddit = praw.Reddit(
+#     client_id="XAWWcdEAoBj5NyhDFhoZGg",
+#     client_secret="376aCdcCboyRVXCoff5wusr-Y19ahQ",
+#     password="jianjian.",
+#     user_agent="USERAGENT",
+#     username="dev_jian",
+#     ratelimit_seconds=60,
+# )
+
 reddit = praw.Reddit(
-    client_id="XAWWcdEAoBj5NyhDFhoZGg",
-    client_secret="376aCdcCboyRVXCoff5wusr-Y19ahQ",
-    password="jianjian.",
+    client_id="R28puZYRno9JelIiMNtwGA",
+    client_secret="6PLNOoZapjk2AW-BMBXoeQuSmLywUg",
+    password="nssrhksdn!@#",
     user_agent="USERAGENT",
-    username="dev_jian",
+    username="nss_kw",
     ratelimit_seconds=60,
 )
-
 
 ap = argparse.ArgumentParser(description='reddit crawler')
 ap.add_argument('--year', type=int, default=2021, 
@@ -65,8 +73,12 @@ for i, sub in enumerate(tqdm(submission_list)):
     if sub_id in threads_dict: 
         # print("{} have already saved".format(sub_id))
         continue
-
+        
     submission = reddit.submission(sub_id)
+    try:
+        submission._fetch()
+    except prawcore.exceptions.NotFound:
+        continue
 
     # filtering 
     if submission.selftext == '[deleted]':
@@ -77,16 +89,16 @@ for i, sub in enumerate(tqdm(submission_list)):
          threads_dict[sub_id] = None
     else:
         threads_dict[sub_id] += [{'msg_id': sub_id, \
-                                     'poster': sub['author'], \
-                                     'thread_id': sub['id'], \
-                                     'msg': submission.selftext, \
-                                     'timestamp': submission.created_utc,
-                                    }] 
-        posts_dict[sub['id']] = {'msg_id': sub_id, \
-                                 'poster': sub['author'], \
-                                 'thread_id': sub['id'], \
-                                 'msg': submission.selftext, \
-                                 'timestamp': submission.created_utc}
+                                  'poster': sub['author'], \
+                                  'thread_id': sub['id'], \
+                                  'msg': submission.selftext, \
+                                  'timestamp': submission.created_utc \
+                                 }]
+        posts_dict[sub_id] = {'msg_id': sub_id, \
+                              'poster': sub['author'], \
+                              'thread_id': sub['id'], \
+                              'msg': submission.selftext, \
+                              'timestamp': submission.created_utc}
 
         # comment
         submission.comments.replace_more(limit=None)
@@ -122,6 +134,9 @@ for i, sub in enumerate(tqdm(submission_list)):
         with open('data/reddit_btc_parsed_{}'.format(year), "wb") as f:
             pickle.dump([posts_dict, threads_dict], f)
         
+print("update dictionary...")
+with open('data/reddit_btc_parsed_{}'.format(year), "wb") as f:
+    pickle.dump([posts_dict, threads_dict], f)
         
 # num_proc = 8
 
