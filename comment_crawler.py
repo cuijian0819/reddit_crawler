@@ -94,7 +94,7 @@ for i, sub in enumerate(tqdm(submission_list)):
         # print("{} have already saved".format(sub_id))
         continue
     
-    tmp_reddit = reddit_list[(i%4)]
+    tmp_reddit = reddit_list[(i%len(reddit_list))]
     submission = tmp_reddit.submission(sub_id)
     try:
         submission._fetch()

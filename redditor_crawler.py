@@ -49,6 +49,7 @@ reddit4 = praw.Reddit(
 )
 
 reddit_list = [reddit1, reddit2, reddit3, reddit4]
+# reddit_list = [reddit1, reddit2]
 
 ap = argparse.ArgumentParser(description='reddit crawler')
 ap.add_argument('--year', type=int, default=2019, 
@@ -80,7 +81,7 @@ for i, redditor_name in enumerate(tqdm(redditors_list)):
     if redditor_name in redditors_dict:
         continue
 
-    tmp_reddit = reddit_list[(i%4)]
+    tmp_reddit = reddit_list[(i%len(reddit_list))]
     redditor = tmp_reddit.redditor(redditor_name)
     
     try:
