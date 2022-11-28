@@ -52,10 +52,14 @@ reddit_list = [reddit1, reddit2, reddit3, reddit4]
 ap = argparse.ArgumentParser(description='reddit crawler')
 ap.add_argument('--year', type=int, default=2021, 
                 help='year to crawl')
+ap.add_argument('--subr', type=str, default='youtube', 
+                help='subreddit to crawl')
+
 
 args = ap.parse_args()
 
 year = args.year
+subr = args.subr
 
 # posts_dict: 
 # key:  msg_id
@@ -68,8 +72,8 @@ year = args.year
 #             quote: '', msg:''}, ...]
 
 
-if os.path.exists('data/reddit_btc_parsed_{}'.format(year)):
-    with open('data/reddit_btc_parsed_{}'.format(year), "rb") as f:
+if os.path.exists(f'data/reddit_parsed_{subr}'):
+    with open(f'data/reddit_parsed_{subr}', "rb") as f:
         posts_dict, threads_dict = pickle.load(f)
 
 else: 
@@ -78,9 +82,9 @@ else:
 
     
 submission_list = list()
-file_list = os.listdir('data/submissions/{}'.format(year))
+file_list = os.listdir(f'data/submissions/{subr}')
 for sub in tqdm(file_list):
-    with open('data/submissions/{}/'.format(year) + sub, 'rb') as f:
+    with open(f'data/submissions/{subr}/' + sub, 'rb') as f:
         tmp_list = pickle.load(f)
     submission_list += tmp_list
     
@@ -112,6 +116,7 @@ for i, sub in enumerate(tqdm(submission_list)):
         threads_dict[sub_id] += [{'msg_id': sub_id, \
                                   'poster': sub['author'], \
                                   'thread_id': sub['id'], \
+                                  'title': sub['title'], \
                                   'msg': submission.selftext, \
                                   'timestamp': submission.created_utc \
                                  }]
@@ -152,11 +157,11 @@ for i, sub in enumerate(tqdm(submission_list)):
     # save
     if i%100 == 0: 
         print("update dictionary...")
-        with open('data/reddit_btc_parsed_{}'.format(year), "wb") as f:
+        with open(f'data/reddit_parsed_{subr}', "wb") as f:
             pickle.dump([posts_dict, threads_dict], f)
         
 print("update dictionary...")
-with open('data/reddit_btc_parsed_{}'.format(year), "wb") as f:
+with open(f'data/reddit_parsed_{subr}', "wb") as f:
     pickle.dump([posts_dict, threads_dict], f)
         
 # num_proc = 8
